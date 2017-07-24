@@ -2,26 +2,31 @@ package com.company;
 
 public class Game {
 
-
     public enum genreTypes {
         ACTION , FPS, MMO, RPG;
     }
 
     public enum ratings {
+
+
         G, PG, M, MA, R;
     }
 
+    public enum Platforms {
+        XBOX, PC, PS4;
+    }
 
     String title;
-    String media;
+    Platforms platform;
     genreTypes genre;
     ratings rating;
 
-    public void Rating (String title, String media, genreTypes genre, ratings rating){
-        this.title = title;
-        this.media = media;
-        this.genre = genre;
-        this.rating = rating;
+    public Game (String title, Platforms platform, genreTypes genre, ratings rating){
+    this.title = title;
+    this.platform = platform;
+    this.genre = genre;
+    this.rating = rating;
+
 
     }
 
@@ -33,16 +38,20 @@ public class Game {
         this.title = title;
     }
 
-    public String getMedia() {
-        return media;
+    public Platforms getPlatform() {
+        return platform;
     }
 
-    public void setMedia(String media) {
-        this.media = media;
+    public void setPlatform(Platforms platform) {
+        this.platform = platform;
     }
 
     public genreTypes getGenre() {
         return genre;
+    }
+
+    public String getGenreText() {
+        return genre.toString().toLowerCase();
     }
 
     public void setGenre(genreTypes genre) {
@@ -53,7 +62,18 @@ public class Game {
         return rating;
     }
 
+    public String getRatingText() {
+        return rating.toString().toUpperCase();
+    }
+
     public void setRating(ratings rating) {
         this.rating = rating;
+    }
+
+    public void print() {
+        System.out.print(this.getTitle() + " is an " +
+                this.getGenreText() + " and has a rating of " +
+                this.getRatingText() + " the game's platform is " +
+                this.getPlatform() );
     }
 }
