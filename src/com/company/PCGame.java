@@ -5,7 +5,7 @@ package com.company;
  */
 public class PCGame extends Game{
 
-    String purchaseFrom;
+    private String purchaseFrom;
 
     public PCGame(String title, genreTypes genre, ratings rating,String purchaseFrom) {
         super(title, platforms.PC, genre, rating);

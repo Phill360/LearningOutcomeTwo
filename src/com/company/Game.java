@@ -16,10 +16,10 @@ public class Game {
         XBOX, PC, PS4;
     }
 
-    String title;
-    platforms platform;
-    genreTypes genre;
-    ratings rating;
+    private String title;
+    private platforms platform;
+    private genreTypes genre;
+    private ratings rating;
 
     public Game (String title, platforms platform, genreTypes genre, ratings rating){
     this.title = title;

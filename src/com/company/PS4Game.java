@@ -6,7 +6,7 @@ package com.company;
  * Created by Phill360 on 25/7/17.
  */
 public class PS4Game extends Game {
-    Boolean vrGame;
+    private Boolean vrGame;
 
     public PS4Game(String title, genreTypes genre, ratings rating, Boolean vrGame) {
 

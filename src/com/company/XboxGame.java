@@ -4,7 +4,7 @@ package com.company;
  * Created by Phill360 on 24/7/17.
  */
 public class XboxGame extends Game{
-    int gamerScore;
+    private int gamerScore;
 
 
     public XboxGame(String title, genreTypes genre, ratings rating, int gamerScore) {
