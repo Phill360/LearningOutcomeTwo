@@ -12,16 +12,16 @@ public class Game {
         G, PG, M, MA, R;
     }
 
-    public enum Platforms {
+    public enum platforms {
         XBOX, PC, PS4;
     }
 
     String title;
-    Platforms platform;
+    platforms platform;
     genreTypes genre;
     ratings rating;
 
-    public Game (String title, Platforms platform, genreTypes genre, ratings rating){
+    public Game (String title, platforms platform, genreTypes genre, ratings rating){
     this.title = title;
     this.platform = platform;
     this.genre = genre;
@@ -38,11 +38,11 @@ public class Game {
         this.title = title;
     }
 
-    public Platforms getPlatform() {
+    public platforms getPlatform() {
         return platform;
     }
 
-    public void setPlatform(Platforms platform) {
+    public void setPlatform(platforms platform) {
         this.platform = platform;
     }
 
@@ -72,7 +72,7 @@ public class Game {
 
     public void print() {
         System.out.print(this.getTitle() + " is an " +
-                this.getGenreText() + " and has a rating of " +
+                this.getGenreText() + " game and has a rating of " +
                 this.getRatingText() + " the game's platform is " +
                 this.getPlatform() );
     }

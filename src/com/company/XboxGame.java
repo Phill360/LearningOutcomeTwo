@@ -9,7 +9,7 @@ public class XboxGame extends Game{
 
     public XboxGame(String title, genreTypes genre, ratings rating, int gamerScore) {
 
-        super("Halo", Platforms.XBOX, genreTypes.ACTION, ratings.M);
+        super(title, platforms.XBOX, genre, rating);
         this.gamerScore = gamerScore;
     }
 
@@ -19,6 +19,6 @@ public class XboxGame extends Game{
 
     public void print(){
         super.print();
-        System.out.print(" and has a gamerscore of " + this.getGamerScore());
+        System.out.print(" and has a gamerscore of " + this.getGamerScore() + "\n");
     }
 }
